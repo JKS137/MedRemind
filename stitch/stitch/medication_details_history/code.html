@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medication Details &amp; History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2c6d48",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#151d18",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-md mx-auto group/design-root overflow-x-hidden border-x border-slate-200 dark:border-slate-800 shadow-sm">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md z-10">
+<button class="flex size-12 shrink-0 items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Medication Details</h2>
+</div>
+<!-- Header Card -->
+<div class="p-4">
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 p-5 shadow-sm border-l-4 border-primary">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<p class="text-primary text-sm font-medium leading-normal uppercase tracking-wider">Blood Pressure</p>
+<h1 class="text-3xl font-bold leading-tight text-slate-900 dark:text-slate-100">Lisinopril</h1>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-flex items-center rounded-md bg-primary/10 px-2 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">10mg</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Once daily, Morning</span>
+</div>
+</div>
+<div class="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">pill</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Adherence Stat -->
+<div class="px-4 py-2">
+<div class="flex items-center justify-between rounded-xl bg-white dark:bg-slate-900 p-4 shadow-sm">
+<div class="flex flex-col gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Adherence this month</p>
+<p class="text-2xl font-bold leading-tight text-slate-900 dark:text-slate-100">87%</p>
+</div>
+<!-- Circular Progress (Simulated with SVG) -->
+<div class="relative size-16">
+<svg class="size-full transform -rotate-90" viewbox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+<circle class="stroke-current text-slate-200 dark:text-slate-700" cx="18" cy="18" fill="none" r="16" stroke-width="4"></circle>
+<circle class="stroke-current text-primary" cx="18" cy="18" fill="none" r="16" stroke-dasharray="100" stroke-dashoffset="13" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">thumb_up</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 30-Day Adherence Calendar -->
+<div class="px-4 pt-6 pb-2">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em] mb-4">30-Day History</h3>
+<div class="rounded-xl bg-white dark:bg-slate-900 p-4 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<button class="flex size-8 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<p class="text-base font-bold leading-tight text-center">October 2023</p>
+<button class="flex size-8 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-y-2">
+<div class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase text-center pb-2">S</div>
+<div class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase text-center pb-2">M</div>
+<div class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase text-center pb-2">T</div>
+<div class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase text-center pb-2">W</div>
+<div class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase text-center pb-2">T</div>
+<div class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase text-center pb-2">F</div>
+<div class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase text-center pb-2">S</div>
+<!-- Calendar Days -->
+<div class="h-8 w-full col-start-4 text-sm font-medium flex items-center justify-center text-slate-400 dark:text-slate-500">1</div>
+<div class="h-8 w-full text-sm font-medium flex items-center justify-center text-slate-400 dark:text-slate-500">2</div>
+<div class="h-8 w-full text-sm font-medium flex items-center justify-center text-slate-400 dark:text-slate-500">3</div>
+<div class="h-8 w-full text-sm font-medium flex items-center justify-center text-slate-400 dark:text-slate-500">4</div>
+<!-- Taken (Green) -->
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">5</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">6</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">7</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">8</div></div>
+<!-- Skipped (Amber) -->
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-amber-500 text-white text-sm font-medium">9</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">10</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">11</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">12</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">13</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">14</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">15</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">16</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">17</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">18</div></div>
+<!-- Skipped (Amber) -->
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-amber-500 text-white text-sm font-medium">19</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">20</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">21</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">22</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-medium">23</div></div>
+<!-- Future (Gray) -->
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">24</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">25</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">26</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">27</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">28</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">29</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">30</div></div>
+<div class="h-8 w-full flex justify-center"><div class="size-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">31</div></div>
+</div>
+<!-- Legend -->
+<div class="flex items-center justify-center gap-4 mt-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-1.5"><div class="size-3 rounded-full bg-primary"></div><span class="text-xs text-slate-500">Taken</span></div>
+<div class="flex items-center gap-1.5"><div class="size-3 rounded-full bg-amber-500"></div><span class="text-xs text-slate-500">Skipped</span></div>
+<div class="flex items-center gap-1.5"><div class="size-3 rounded-full bg-slate-200 dark:bg-slate-800"></div><span class="text-xs text-slate-500">Future</span></div>
+</div>
+</div>
+</div>
+<!-- Recent Logs -->
+<div class="px-4 py-4 flex-1">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Recent Logs</h3>
+<div class="flex flex-col gap-3">
+<!-- Log Item: Taken -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Oct 23, 2023</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">8:05 AM</p>
+</div>
+</div>
+<span class="text-sm font-medium text-primary">Taken</span>
+</div>
+<!-- Log Item: Taken -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Oct 22, 2023</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">7:50 AM</p>
+</div>
+</div>
+<span class="text-sm font-medium text-primary">Taken</span>
+</div>
+<!-- Log Item: Skipped -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Oct 19, 2023</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Missed Morning Dose</p>
+</div>
+</div>
+<span class="text-sm font-medium text-amber-600 dark:text-amber-500">Skipped</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="p-4 mt-auto mb-6 flex gap-3">
+<button class="flex-1 flex items-center justify-center gap-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 h-12 px-4 text-sm font-bold transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+                Edit
+            </button>
+<button class="flex-1 flex items-center justify-center gap-2 rounded-xl border border-red-200 dark:border-red-900/50 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 h-12 px-4 text-sm font-bold transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+                Delete
+            </button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "MedRemind",
+    "slug": "medremind",
+    "version": "0.1.0",
+    "sdkVersion": "49.0.0",
+    "platforms": ["ios", "android"],
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F5F3EF"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.medremind",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.yourname.medremind",
+      "versionCode": 1
+    }
+  }
+}

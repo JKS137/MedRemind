@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add New Medication</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2c6d48",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#151d18",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-xl overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex items-center p-4 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/10">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 text-slate-900 dark:text-slate-100 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-xl font-bold leading-tight flex-1 text-center pr-10">Add Medication</h2>
+</div>
+<div class="flex-1 overflow-y-auto pb-24">
+<!-- Form Fields -->
+<div class="px-4 py-4 space-y-4">
+<label class="flex flex-col">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300 mb-1 ml-1">Medication Name</span>
+<input class="w-full rounded-xl border-0 bg-white dark:bg-slate-800 ring-1 ring-primary/20 focus:ring-2 focus:ring-primary py-3 px-4 shadow-sm placeholder:text-slate-400" placeholder="e.g. Lisinopril" type="text"/>
+</label>
+<label class="flex flex-col">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300 mb-1 ml-1">Dosage</span>
+<input class="w-full rounded-xl border-0 bg-white dark:bg-slate-800 ring-1 ring-primary/20 focus:ring-2 focus:ring-primary py-3 px-4 shadow-sm placeholder:text-slate-400" placeholder="e.g. 10 mg" type="text"/>
+</label>
+</div>
+<!-- Form -->
+<div class="px-4 py-2">
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-300 mb-3 ml-1">Form</h3>
+<div class="flex gap-2 flex-wrap">
+<button class="flex items-center justify-center rounded-full bg-primary text-white px-5 py-2 text-sm font-medium shadow-sm">
+                        Tablet
+                    </button>
+<button class="flex items-center justify-center rounded-full bg-white dark:bg-slate-800 ring-1 ring-primary/20 px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary/5">
+                        Capsule
+                    </button>
+<button class="flex items-center justify-center rounded-full bg-white dark:bg-slate-800 ring-1 ring-primary/20 px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary/5">
+                        Liquid
+                    </button>
+<button class="flex items-center justify-center rounded-full bg-white dark:bg-slate-800 ring-1 ring-primary/20 px-5 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary/5">
+                        Injection
+                    </button>
+</div>
+</div>
+<!-- Frequency -->
+<div class="px-4 py-4">
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-300 mb-3 ml-1">Frequency</h3>
+<div class="flex gap-2 flex-wrap">
+<button class="flex items-center justify-center rounded-full bg-white dark:bg-slate-800 ring-1 ring-primary/20 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary/5">
+                        Once daily
+                    </button>
+<button class="flex items-center justify-center rounded-full bg-primary text-white px-4 py-2 text-sm font-medium shadow-sm">
+                        Twice daily
+                    </button>
+<button class="flex items-center justify-center rounded-full bg-white dark:bg-slate-800 ring-1 ring-primary/20 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary/5">
+                        As needed
+                    </button>
+</div>
+</div>
+<!-- Times -->
+<div class="px-4 py-2">
+<div class="flex justify-between items-center mb-3 ml-1">
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-300">Reminders</h3>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between bg-white dark:bg-slate-800 p-4 rounded-xl ring-1 ring-primary/10 shadow-sm">
+<span class="text-lg font-medium">08:00 AM</span>
+<span class="material-symbols-outlined text-slate-400">schedule</span>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-slate-800 p-4 rounded-xl ring-1 ring-primary/10 shadow-sm">
+<span class="text-lg font-medium">08:00 PM</span>
+<span class="material-symbols-outlined text-slate-400">schedule</span>
+</div>
+<button class="w-full py-3 rounded-xl border border-dashed border-primary/30 text-primary font-medium flex items-center justify-center gap-2 hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">add</span>
+                        Add Time
+                    </button>
+</div>
+</div>
+<!-- With Food Toggle -->
+<div class="px-4 py-4">
+<div class="flex items-center justify-between bg-white dark:bg-slate-800 p-4 rounded-xl ring-1 ring-primary/10 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div>
+<p class="font-medium text-slate-900 dark:text-slate-100">Take with food</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Required for absorption</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Inventory -->
+<div class="px-4 py-2 space-y-4">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl ring-1 ring-primary/10 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-medium text-slate-900 dark:text-slate-100">Current Inventory</h3>
+<div class="flex items-center bg-background-light dark:bg-slate-900 rounded-lg p-1">
+<button class="size-8 flex items-center justify-center rounded-md hover:bg-white dark:hover:bg-slate-800 text-slate-500 shadow-sm">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span class="w-12 text-center font-medium">60</span>
+<button class="size-8 flex items-center justify-center rounded-md hover:bg-white dark:hover:bg-slate-800 text-slate-500 shadow-sm">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<div class="pt-2 border-t border-slate-100 dark:border-slate-700">
+<div class="flex justify-between items-end mb-2">
+<h3 class="font-medium text-slate-900 dark:text-slate-100">Refill Alert</h3>
+<span class="text-sm text-primary font-medium">10 pills left</span>
+</div>
+<input class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer dark:bg-slate-700 accent-primary" max="30" min="0" type="range" value="10"/>
+</div>
+</div>
+</div>
+<!-- Color Picker -->
+<div class="px-4 py-4">
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-300 mb-3 ml-1">Icon Color</h3>
+<div class="flex gap-4">
+<button class="size-8 rounded-full bg-blue-500 ring-2 ring-offset-2 ring-offset-background-light ring-blue-500"></button>
+<button class="size-8 rounded-full bg-primary"></button>
+<button class="size-8 rounded-full bg-rose-500"></button>
+<button class="size-8 rounded-full bg-amber-500"></button>
+<button class="size-8 rounded-full bg-purple-500"></button>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Button -->
+<div class="fixed bottom-0 w-full max-w-md bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md p-4 border-t border-primary/10 pb-8">
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors">
+                Save Medication
+            </button>
+</div>
+</div>
+</body></html>

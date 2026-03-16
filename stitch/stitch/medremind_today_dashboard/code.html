@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MedRemind Today Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1A4D2E",
+                        "primary-light": "#4F6F52",
+                        "accent": "#E8DFCA",
+                        "accent-dark": "#F5EFE6",
+                        "warning": "#D67B28",
+                        "warning-light": "#FDE6D2",
+                        "background-light": "#FDFBF7",
+                        "background-dark": "#121A15",
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["DM Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "1.25rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-body antialiased selection:bg-primary/30">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-md mx-auto shadow-xl bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center p-6 pb-4 justify-between sticky top-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md z-10">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 shadow-sm border-2 border-primary/20" data-alt="User profile picture of Ahmad" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQSrfAZdFaJpqtAOmIeaq4RfBw4rjF1PrEQuShB-qxL0aOMm-9hYkWGT8_-3yZTyfYZ8cIxdtFtwfAOyUHsjdiCrskXnGIwbqyLPWd7tU6B6mRoz0XrPHyblEAT1fFGYIJd7M_NZemb4VI_PFMeYzCyxDUhXJ1BFsJQUVupVQtx9PDW-BXmwT2FYgnuJYybog7ZornnNROPDxBQ5_SJ0i8kVWTDg-VeOb0nnBDw3l_XrXcpmHS3c_4yZDzzyyEiNQYnUOp6Dh7Ri0");'></div>
+<div>
+<p class="text-sm text-primary-light font-medium uppercase tracking-wider mb-0.5">Today Dashboard</p>
+<h2 class="text-3xl font-display font-bold leading-tight text-primary dark:text-accent-dark">Good morning, Ahmad</h2>
+</div>
+</div>
+<button class="flex items-center justify-center rounded-full size-10 bg-accent-dark text-primary shadow-sm hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+</button>
+</header>
+<main class="flex-1 px-6 pb-24 flex flex-col gap-6">
+<!-- Progress Card -->
+<section class="rounded-xl bg-primary text-white p-5 shadow-lg relative overflow-hidden">
+<!-- Decorative circle -->
+<div class="absolute -right-10 -top-10 size-40 rounded-full bg-white/10 blur-2xl"></div>
+<div class="flex flex-col gap-4 relative z-10">
+<div class="flex gap-6 justify-between items-end">
+<div>
+<p class="text-accent/80 text-sm font-medium mb-1 uppercase tracking-wider">Daily Progress</p>
+<p class="text-2xl font-display font-bold">Doses taken today</p>
+</div>
+<p class="text-3xl font-display font-bold text-accent">2<span class="text-xl text-accent/70">/3</span></p>
+</div>
+<div class="rounded-full bg-black/20 h-2.5 overflow-hidden">
+<div class="h-full rounded-full bg-accent shadow-[0_0_10px_rgba(232,223,202,0.5)] transition-all duration-1000 ease-out" style="width: 66%;"></div>
+</div>
+</div>
+</section>
+<!-- Today's Doses List -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-2xl font-display font-bold text-slate-800 dark:text-slate-100">Today's Doses</h3>
+<span class="text-sm font-medium text-primary-light bg-accent-dark px-3 py-1 rounded-full">3 Prescriptions</span>
+</div>
+<!-- Card 1 (Taken) -->
+<article class="flex items-center gap-4 bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/50 transition-all hover:shadow-md">
+<div class="flex items-center justify-center rounded-lg bg-accent-dark text-primary shrink-0 size-14 shadow-inner">
+<span class="material-symbols-outlined text-[28px]">pill</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">Metformin 500mg</h4>
+<p class="text-primary-light text-sm font-medium flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Taken 8:12 AM
+                    </p>
+</div>
+<div class="shrink-0 flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+</article>
+<!-- Card 2 (Taken) -->
+<article class="flex items-center gap-4 bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/50 transition-all hover:shadow-md">
+<div class="flex items-center justify-center rounded-lg bg-accent-dark text-primary shrink-0 size-14 shadow-inner">
+<span class="material-symbols-outlined text-[28px]">prescriptions</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">Lisinopril 10mg</h4>
+<p class="text-primary-light text-sm font-medium flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Taken 8:15 AM
+                    </p>
+</div>
+<div class="shrink-0 flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+</article>
+<!-- Card 3 (Due) -->
+<article class="flex items-center gap-4 bg-warning-light/30 dark:bg-warning/10 p-4 rounded-xl shadow-sm border border-warning/30 transition-all hover:shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-warning"></div>
+<div class="flex items-center justify-center rounded-lg bg-white dark:bg-slate-800 text-warning shrink-0 size-14 shadow-inner ml-1">
+<span class="material-symbols-outlined text-[28px]">medication</span>
+</div>
+<div class="flex flex-col justify-center flex-1 ml-1">
+<h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">Atorvastatin 20mg</h4>
+<p class="text-warning text-sm font-bold flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">alarm</span> Due 9:00 PM
+                    </p>
+</div>
+<div class="shrink-0">
+<button class="flex items-center justify-center px-4 py-2 rounded-full bg-warning text-white text-sm font-bold shadow-sm hover:bg-warning/90 transition-colors">
+                        Take Now
+                    </button>
+</div>
+</article>
+</section>
+<!-- Refill Alert Strip -->
+<div class="mt-4 flex items-start gap-3 bg-warning-light text-warning-dark p-4 rounded-xl border border-warning/20 shadow-sm">
+<span class="material-symbols-outlined text-[24px] text-warning mt-0.5 shrink-0">info</span>
+<div class="flex-1">
+<h4 class="font-bold text-slate-800">Refill Needed</h4>
+<p class="text-sm text-slate-600 mt-1">Lisinopril 10mg is running low. You have 4 days left.</p>
+</div>
+<button class="text-sm font-bold text-warning hover:underline whitespace-nowrap">Order now</button>
+</div>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto w-full border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg px-6 pb-8 pt-3 z-50 rounded-t-[2rem] shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center">
+<a class="flex flex-col items-center justify-center gap-1 text-primary group" href="#">
+<div class="flex h-10 w-16 items-center justify-center bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-[24px] filled">home</span>
+</div>
+<p class="text-xs font-bold">Today</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors group" href="#">
+<div class="flex h-10 w-16 items-center justify-center rounded-full group-hover:bg-slate-100 dark:group-hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">pill</span>
+</div>
+<p class="text-xs font-medium">Meds</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors group" href="#">
+<div class="flex h-10 w-16 items-center justify-center rounded-full group-hover:bg-slate-100 dark:group-hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">history</span>
+</div>
+<p class="text-xs font-medium">History</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors group" href="#">
+<div class="flex h-10 w-16 items-center justify-center rounded-full group-hover:bg-slate-100 dark:group-hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">person</span>
+</div>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

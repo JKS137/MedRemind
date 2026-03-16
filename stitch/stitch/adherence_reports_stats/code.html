@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Adherence Reports &amp; Stats</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2c6d48",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#151d18",
+                        "amber-accent": "#d97706",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+<!-- Header -->
+<header class="flex items-center justify-between p-4 pb-2">
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-serif text-primary dark:text-primary">Your Progress</h2>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Metrics Grid -->
+<section class="grid grid-cols-2 gap-4 p-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary/20 bg-white dark:bg-slate-800 shadow-sm">
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Weekly</p>
+<p class="text-2xl font-bold text-primary dark:text-primary">91%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary/20 bg-white dark:bg-slate-800 shadow-sm">
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Monthly</p>
+<p class="text-2xl font-bold text-primary dark:text-primary">87%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary/20 bg-white dark:bg-slate-800 shadow-sm">
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Streak</p>
+<p class="text-2xl font-bold text-primary dark:text-primary">14 days</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary/20 bg-white dark:bg-slate-800 shadow-sm">
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Total Doses</p>
+<p class="text-2xl font-bold text-primary dark:text-primary">342</p>
+</div>
+</section>
+<!-- Chart Section -->
+<section class="p-4 py-6 bg-white dark:bg-slate-800 m-4 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex flex-col gap-2 mb-6">
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Last 7 Days Adherence</p>
+<div class="flex items-baseline gap-2">
+<p class="text-[32px] font-bold leading-tight text-slate-900 dark:text-white">89%</p>
+</div>
+</div>
+<div class="grid min-h-[180px] grid-flow-col gap-4 grid-rows-[1fr_auto] items-end justify-items-center">
+<div class="w-full flex flex-col items-center justify-end h-full group relative">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-sm absolute bottom-0 h-[30%] transition-all"></div>
+<div class="bg-primary w-full rounded-t-sm absolute bottom-0 h-[30%]"></div>
+</div>
+<p class="text-xs font-bold text-slate-500 mt-2">Mon</p>
+<div class="w-full flex flex-col items-center justify-end h-full group relative">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-sm absolute bottom-0 h-[90%] transition-all"></div>
+<div class="bg-primary w-full rounded-t-sm absolute bottom-0 h-[90%]"></div>
+</div>
+<p class="text-xs font-bold text-slate-500 mt-2">Tue</p>
+<div class="w-full flex flex-col items-center justify-end h-full group relative">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-sm absolute bottom-0 h-[50%] transition-all"></div>
+<div class="bg-primary w-full rounded-t-sm absolute bottom-0 h-[50%]"></div>
+</div>
+<p class="text-xs font-bold text-slate-500 mt-2">Wed</p>
+<div class="w-full flex flex-col items-center justify-end h-full group relative">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-sm absolute bottom-0 h-[100%] transition-all"></div>
+<div class="bg-primary w-full rounded-t-sm absolute bottom-0 h-[100%]"></div>
+</div>
+<p class="text-xs font-bold text-slate-500 mt-2">Thu</p>
+<div class="w-full flex flex-col items-center justify-end h-full group relative">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-sm absolute bottom-0 h-[90%] transition-all"></div>
+<div class="bg-primary w-full rounded-t-sm absolute bottom-0 h-[90%]"></div>
+</div>
+<p class="text-xs font-bold text-slate-500 mt-2">Fri</p>
+<div class="w-full flex flex-col items-center justify-end h-full group relative">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-sm absolute bottom-0 h-[70%] transition-all"></div>
+<div class="bg-primary w-full rounded-t-sm absolute bottom-0 h-[70%]"></div>
+</div>
+<p class="text-xs font-bold text-slate-500 mt-2">Sat</p>
+<div class="w-full flex flex-col items-center justify-end h-full group relative">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-sm absolute bottom-0 h-[10%] transition-all"></div>
+<div class="bg-primary w-full rounded-t-sm absolute bottom-0 h-[10%]"></div>
+</div>
+<p class="text-xs font-bold text-slate-500 mt-2">Sun</p>
+</div>
+</section>
+<!-- Action Button -->
+<section class="px-4 py-6">
+<button class="w-full flex items-center justify-center gap-2 rounded-xl h-14 bg-amber-accent text-white text-base font-bold shadow-md active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span>Export PDF Report</span>
+</button>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 pb-safe pt-2 z-50">
+<div class="flex gap-2 mb-2 max-w-md mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 hover:text-primary dark:hover:text-primary transition-colors py-2" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 hover:text-primary dark:hover:text-primary transition-colors py-2" href="#">
+<span class="material-symbols-outlined text-2xl">medication</span>
+<span class="text-[10px] font-medium">Pills</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary dark:text-primary py-2 relative" href="#">
+<div class="absolute -top-1 w-8 h-1 bg-primary rounded-full"></div>
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+<span class="text-[10px] font-bold">Progress</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 hover:text-primary dark:hover:text-primary transition-colors py-2" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+<!-- iOS Safe Area padding bottom spacer -->
+<div class="h-6"></div>
+</nav>
+</body></html>
